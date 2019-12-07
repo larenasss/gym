@@ -1,8 +1,11 @@
 .event {
+  padding: 40px 0;
   margin-bottom: 50px;
   transform: skewY(-0deg);
   position: relative;
-  background: url('../images/content/event-bg.jpg') center center / cover no-repeat;
+  background: url('../images/content/event-bg.jpg') center bottom no-repeat;
+  height: 445px;
+  min-width: 978px;
 }
 
 .event__animate {
@@ -23,21 +26,25 @@
 }
 
 .event__list {
+  position: relative;
+  bottom: 0;
   display: flex;
   justify-content: space-between;
 }
 
 .event__item {
+  bottom: 0;
   display: inline-block;
   position: relative;
   width: 230px;
-  height: 242px;
+  height: 240px;
+ 
 
   &:before {
     content: "";
     position: absolute;
     width: 4px;
-    height: 244px;
+    height: 240px;
     background-color: #d0d0d0;
     left: 4px;
   }
@@ -54,11 +61,11 @@
   }
 
   &:nth-child(1) {
-    margin-top: 45px;
+    margin-top: 46px;
   }
 
   &:nth-child(2) {
-    margin-top: 22px;
+    margin-top: 24px;
   }
 }
 
