@@ -12,7 +12,7 @@ jQuery(function($){
     let skierAnimate = anime({
       targets: '.event__animate',
       left: '-192px',
-      bottom: '-70px',
+      bottom: '-55px',
       easing: 'linear',
       duration: 4000,
       delay: 2000,
