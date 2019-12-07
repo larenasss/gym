@@ -1,0 +1,151 @@
+.event {
+  margin-bottom: 50px;
+  transform: skewY(-0deg);
+  position: relative;
+  background: url('../images/content/event-bg.jpg') center center / cover no-repeat;
+}
+
+.event__animate {
+  position: absolute;
+  width: 192px;
+  height: 160px;
+  right: -192px;
+  bottom: 30px;
+}
+
+.event__title >h2 {
+  font-family: 'introRegularAlt';
+  font-weight: 1000;
+  font-size: 34px;
+  color: #626161;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.event__list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.event__item {
+  display: inline-block;
+  position: relative;
+  width: 230px;
+  height: 242px;
+
+  &:before {
+    content: "";
+    position: absolute;
+    width: 4px;
+    height: 244px;
+    background-color: #d0d0d0;
+    left: 4px;
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    width: 4px;
+    height: 252px;
+    background-color: #d0d0d0;
+    right: 6px;
+    top: 0;
+    z-index: 15;
+  }
+
+  &:nth-child(1) {
+    margin-top: 45px;
+  }
+
+  &:nth-child(2) {
+    margin-top: 22px;
+  }
+}
+
+.event__data {
+  display: flex;
+  z-index: 3;
+  font-size: 30px;
+  font-weight: bold;
+  font-family: 'introBoldAlt';
+  position: absolute;
+  top: -48px;
+  left: -15px;
+  z-index: 25;
+
+}
+
+.event__data-start,  .event__data-finish {
+  width: 60px;
+  height: 56px;
+  background-color: #f2537c;
+  position: relative;
+  display: inline-block;
+  text-align: center;
+
+  & >span {
+    font-size: 8px;
+    position: absolute;
+    bottom: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: .6;
+  }
+}
+
+.event__data-finish {
+  
+
+  &:before {
+    content: "–";
+    position: absolute;
+    left: -9px;
+    top: 2px;
+    font-weight: bold;
+  }
+}
+
+.event__banner {
+  width: 230px;
+  height: 84px;
+  background-color: #de476e;
+  position: relative;
+  z-index: 20;
+  transform: skewY(-10deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.event__banner-link {
+  font-size: 18px;
+  font-family: 'introRegular';
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.event__behind {
+  position: absolute;
+  width: 236px;
+  height: 56px;
+  background-color: #c63e61;
+  z-index: 1;
+  transform: skewY(11deg);
+  top: -2px;
+  left: -14px;
+  
+  &:before {
+    content: "";
+    position: absolute;
+    border: 10px solid transparent;
+    border-right-color: #c63e61;
+    border-left-width: 0;
+    right: -5px;
+    bottom: -2px;
+    transform: rotate(20deg);
+    z-index: -1;
+  }
+}

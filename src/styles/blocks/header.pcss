@@ -1,0 +1,101 @@
+.header {
+  margin-bottom: 30px;
+}
+
+.header__top {
+  background-image: linear-gradient(to top, #e23760, #f85980);
+}
+
+.header__content {
+  height: 50px;
+  width: 975px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__link {
+  font-size: 12px;  
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.header__calendar {
+  width: 230px;
+  height: 100%;
+  background-color: #cd365a;
+  position: relative;
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 18px;
+    transform: translateY(-50%);
+    background-image: url('../images/icons/calendar.png');
+    background-repeat: no-repeat;
+    width: 27px;
+    height: 32px;
+    opacity: .6;
+  }
+}
+
+.header__phone {
+  width: 230px;
+  height: 100%;
+  background-color: #cd365a;
+  position: relative;
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 30px;
+    transform: translateY(-50%);
+    background-image: url('../images/icons/phone.png');
+    background-repeat: no-repeat;
+    width: 32px;
+    height: 35px;
+  }
+}
+
+.header__link-phone {
+  letter-spacing: 0.36px;
+  display: block;
+  padding: 16px 15px 15px 78px;
+}
+
+.header__link-calendar {
+  letter-spacing: 0.36px;
+  display: block;
+  padding: 16px 15px 15px 58px;
+}
+
+.header__link-number-one {
+  font-size: 14px;
+  color: #ffa3b9;
+}
+
+.header__link-number-two {
+  font-family: 'introBold';
+  font-size: 20px;
+}
+
+.header__main {
+  padding-top: 44px;
+}
+
+.header__container {
+  display: flex;
+  align-items: center;
+}
+
+.header__menu {
+  flex: 1;
+}
+
+.header__logo {
+  margin-right: 100px;
+}
+

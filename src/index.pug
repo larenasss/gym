@@ -4,12 +4,318 @@ include ./mixins.pug
 html(lang="en")
   head
     meta(charset="UTF-8")
-    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(name="viewport", content="width=1010")
     meta(http-equiv="X-UA-Compatible", content="ie=edge")
     title Portfolio | main page
   body
     .wrapper
-      .maincontent
-        +image('content/user.jpg', 'user-pic')
-        +icon('link', 'link-class')
-        .icon-bg
+      .header
+        .header__top
+          .header__content
+            .header__calendar
+              a.header__link.header__link-calendar(href="#")
+                span  расписание занятий  
+            .header__item
+              a.header__link(href="tel:+73852283028")
+                span.header__link-number-one +7 3852 
+                span.header__link-number-two 28-30-28
+            .header__item
+              a.header__link(href="tel:+73852283028")
+                span.header__link-number-one +7 3852 
+                span.header__link-number-two 28-30-28
+            .header__phone
+              a.header__link.header__link-phone(href="")
+                span Заказать звонок
+        .modal
+        .modal__phone
+          .modal__content
+            h2.modal__title Обратный звонок
+            .modal__row
+              label.modal__block
+                .modal__block-title Ваше имя
+                input.modal__input(type="text" placeholder='')
+              label.modal__block
+                .modal__block-title Телефон
+                input.modal__input.modal__input-phone(type="text" placeholder='+7 (___) ___-____')
+            .modal__subtitle Мы обещаем не использовать ваш номер телефона без вашего согласия. Мы не будем рассылать смс и звонить без разрешения.
+            .modal__btn
+              button.modal__button Отправить
+          .modal__close         
+        .header__main
+          .container.header__container
+            .header__logo
+              +image('icons/logo.png', 'parallax__img')
+            .header__menu
+              nav.menu
+                ul.menu__list
+                  li.menu__item 
+                    a.menu__link(href="https://vk.com/feed")
+                      i.menu__icon
+                        +image('icons/dumbbell.png', 'menu__icon-pic')
+                      | Наш клуб
+                  li.menu__item
+                    a.menu__link(href="#")
+                      i.menu__icon
+                        +image('icons/card.png', 'menu__icon-pic')
+                      | Клубные карты
+                  li.menu__item
+                    a.menu__link(href="#")
+                      i.menu__icon
+                        +image('icons/heart.png', 'menu__icon-pic')
+                      | Максима Life
+                  li.menu__item
+                    a.menu__link(href="#")
+                      i.menu__icon
+                        +image('icons/people.png', 'menu__icon-pic')
+                      | Команда
+                  li.menu__item
+                    a.menu__link(href="#")
+                      i.menu__icon
+                        +image('icons/about.png', 'menu__icon-pic')
+                      | Контакты       
+      .page
+        .slider
+          .container.container__slider
+            ul.slider__list
+              li.slider__item
+                +image('content/slider_1.jpg', 'slider__img')
+                .slider__info
+                  a(href="#").slider__link
+                    .slider__title
+                      h2 Карта на полгода за 9900!
+                    .slider__text
+                      p 21 декабря в фитнес-клубе Максима прошли соревнования по армрестлингу.
+                  .slider__btn
+                    button.slider__prev
+                    button.slider__next
+              li.slider__item
+                +image('content/slider_2.jpg', 'slider__img')
+                .slider__info
+                  a(href="#").slider__link
+                    .slider__title
+                      h2 Карта на полгода за 9900!
+                    .slider__text
+                      p 21 декабря в фитнес-клубе Максима прошли соревнования по армрестлингу.
+                  .slider__btn
+                    button.slider__prev
+                    button.slider__next
+              li.slider__item
+                +image('content/slider_3.jpg', 'slider__img')
+                .slider__info
+                  a(href="#").slider__link
+                    .slider__title
+                      h2 Карта на полгода за 9900!
+                    .slider__text
+                      p 21 декабря в фитнес-клубе Максима прошли соревнования по армрестлингу.
+                  .slider__btn
+                    button.slider__prev
+                    button.slider__next
+              li.slider__item
+                +image('content/slider_4.jpg', 'slider__img')
+                .slider__info
+                  a(href="#").slider__link
+                    .slider__title
+                      h2 Карта на полгода за 9900!
+                    .slider__text
+                      p 21 декабря в фитнес-клубе Максима прошли соревнования по армрестлингу.
+                  .slider__btn
+                    button.slider__prev
+                    button.slider__next
+
+        .event
+          .container
+            .event__title
+              h2 Cобытия декабря
+            ul.event__list
+              li.event__item
+                .event__banner
+                  .event__data
+                    .event__data-start
+                      | 10
+                      span Ноября
+                  a.event__banner-link Тягаем гирю
+                .event__behind
+              li.event__item
+                .event__banner
+                  .event__data
+                    .event__data-start
+                      | 14
+                      span Ноября
+                    .event__data-finish
+                      | 30
+                      span Ноября
+                  a.event__banner-link Катаемся на лыжах
+                .event__behind
+              li.event__item
+                .event__banner
+                  .event__data
+                    .event__data-start
+                      | 29
+                      span Ноября
+                    .event__data-finish
+                      | 30
+                      span Ноября
+                  a.event__banner-link Чемпионат по боксу
+                .event__behind
+          .event__animate
+            +image('content/skier.png', 'event__pic')
+        .weight
+          .container
+            .weight__content
+              h2.weight__title Взвесьте себя и узнайте, что делать
+              .weight__subtitle Узнайте, каким должен быть ваш вес, учитывая рост, возраст и род занятий.
+              .weight__form
+                form.form#myForm
+                  .form__row
+                    label.form__top
+                      .form__top-title.form__row-title Вес:
+                      input.form__input(type="text" value='65' placeholder='65 кг')#weight
+                    label.form__top
+                      .form__top-title Возраст:
+                      input.form__input(type="text" value='20' placeholder='20 лет')#age
+                    label.form__top
+                      .form__top-title Рост:
+                      input.form__input(type="text" value='170' placeholder='170 см')#height
+                  .form__row
+                    .form__row-title Кто вы?
+                    label.form__block
+                      input.form__radio(type="radio" name="gender" value='1' checked)
+                      .form__radio-btn
+                        .form__radio-title Мужчина
+                    label.form__block
+                      input.form__radio(type="radio" name="gender" value='2' )
+                      .form__radio-btn
+                        .form__radio-title Женщина
+                  .form__row
+                    .form__row-title Телосложение:
+                    label.form__block
+                      input.form__radio(type="radio" name="body" value='1' checked)
+                      .form__radio-btn
+                        .form__radio-title Нормальное
+                    label.form__block
+                      input.form__radio(type="radio" name="body" value='2')
+                      .form__radio-btn
+                        .form__radio-title Полное
+                    label.form__block
+                      input.form__radio(type="radio" name="body" value='3')
+                      .form__radio-btn
+                        .form__radio-title Хрупкое
+                  .form__row.form__btn
+                    button.form__btn-item(
+                      type="submit"
+                    ) Расчитать
+              .modal
+                .modal__weight
+                  .modal__content
+                    h2.modal__title Результаты рассчета веса
+                    .modal__text
+                      p Перебор. Обратите свое внимание на интенсивные кардиотренировки, позволяющие эффективно сжигать жировые запасы. Выбирайте на свой вкус: зажигательная зумба, степ-аэробика, сайкл-студия или пробежка на беговой дорожке.  И не забывайте о правильном питании! Мы поможем вам составить индивидуальный рацион. И через пару месяцев вы себя не узнаете!
+                    form.modal__form#mySubform
+                      .modal__row.modal__row--top
+                        label.modal__block.modal__block--radio
+                          input.modal__input-radio(type="radio" name="weight" value='1' checked)
+                          .modal__radio-btn
+                            .modal__radio-title Записаться на гостевой визит
+                        label.modal__form-block.modal__block--radio
+                          input.modal__input-radio(type="radio" name="weight" value='2' )
+                          .modal__radio-btn
+                            .modal__radio-title Заказать карту
+                      .modal__row
+                        label.modal__block
+                          .modal__block-title Ваше имя
+                          input.modal__input(type="text" placeholder='')
+                        label.modal__block
+                          .modal__block-title Телефон
+                          input.modal__input.modal__input-phone(type="text" placeholder='+7 (___) ___-____')
+                      .modal__subtitle Мы обещаем не использовать ваш номер телефона без вашего согласия. Мы не будем рассылать смс и звонить без разрешения.
+                      .modal__btn
+                        button.modal__button Отправить
+                  .modal__close
+                                           
+        .counter
+          .counter__content
+            .counter__info
+              h4.counter__info-title Пока вы находитесь на сайте
+              .counter__info-text
+                | человечек уже прошел 
+                span.counter__info-metr 852 
+                |  m 
+                br
+                | и, между прочим, потратил 
+                span.counter__info-call 1125 
+                |  ккал
+          .counter__animate
+            +image('content/man.gif', 'counter__pic')
+      footer.footer
+        .container
+          .footer__content
+            .footer__contacts
+              h4.footer__title ©2015, Фитнес-центр «Максима»
+              .contacts
+                .contacts__address Барнаул, ул. Лазурная, 7  
+                .contacts__phones
+                  span.contacts__phones-title Отдел продаж: 
+                  a.contacts__phones-number(href="tel:+73852283028") 28-30-28
+                .contacts__phones
+                  span.contacts__phones-title Рецепция: 
+                  a.contacts__phones-number(href="tel:+73852283028") 28-30-28
+            .work
+              .work__title Режим работы
+              .work__time
+                ul.work__mode
+                  li.work__days
+                    span Пн-Пт: 
+                    span 7:00 - 22:00
+                  li.work__days
+                    span Сб: 
+                    span 8:00 - 22:00
+                  li.work__days
+                    span Вс:  
+                    span 9:00 - 21:00
+            .socials
+              ul.socials__menu
+                li.socials__item
+                  a.socials__link(href="")
+                    i.socials__icon
+                      +image('icons/vk.png', 'socials-pic')
+                li.socials__item
+                  a.socials__link(href="")
+                    i.socials__icon
+                      +image('icons/facebook.png', 'socials-pic')
+                li.socials__item
+                  a.socials__link(href="")
+                    i.socials__icon
+                      +image('icons/odnolassniki.png', 'socials-pic')
+                li.socials__item
+                  a.socials__link(href="")
+                    i.socials__icon
+                      +image('icons/youtube.png', 'socials-pic')
+              a.social__link-regulations Правила клуба (публичная оферта)
+  
+
+                      
+
+      
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      

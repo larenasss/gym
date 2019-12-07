@@ -1,0 +1,144 @@
+.form {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+
+.form__row {
+  display: flex;
+  width: 100%;
+}
+
+.form__row-title {
+  width: 130px;
+  align-items: center;
+  justify-content: flex-end;
+  display: flex;
+  font-size: 18px;
+  margin-right: 15px;
+}
+
+.form__block {
+  display: flex;
+  cursor: pointer;
+  margin-right: 20px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.form__top-title {
+  align-items: center;
+  display: flex;
+  font-size: 18px;
+  margin-right: 20px;
+} 
+
+.form__input {
+  font-size: 16px;
+  width: 80px;
+  height: 42px;
+  border-radius: 3px;
+  box-shadow: 0 0 0 1px #0d9bbd inset;
+  background: #12a9c4;
+  outline: none;
+  border: none;
+  color: #ffffff;
+  padding-left: 15px;
+
+  &::placeholder {
+    color: #ffffff;
+  }
+
+  &:focus-within {
+    background-color: #ffffff;
+    color: #12a9c4;
+  }
+}
+
+
+.form__top {
+  display: flex;
+  margin-right: 35px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.form__radio, .subform__radio {
+  display: none;
+}
+
+.form__radio-btn {
+  width: 180px;
+  height: 40px;
+  border-radius: 20px;
+  border: solid 2px #41edff;
+  position: relative;
+  cursor: pointer;
+  transition: all .5s;
+
+  &:before {
+    content: "";
+    position: absolute;
+    width: 180px;
+    height: 40px;
+    top: -2px;
+    right: 0;
+    left: -2px;
+    bottom: 0;
+    border-radius: 20px;
+    background-color: aliceblue;
+    opacity: 0;
+  }
+
+  &:hover {
+    background-color: #41edff;
+  }
+
+
+}
+
+.form__radio:checked ~ .form__radio-btn:before {
+  opacity: 1;
+}
+
+.form__radio:checked ~ .form__radio-btn  {
+  color: #12a9c4;
+}
+
+
+.form__radio-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%)
+}
+
+.form__btn-item {
+  width: 251px;
+  height: 55px;
+  border-radius: 3px;
+  border: solid 2px #ffffff;
+  transition: all .5s;
+
+  &:hover {
+    background-color: #41edff;
+  }
+}
+
+.form__btn {
+  font-family: 'introRegularAlt';
+  justify-content: center;
+  display: flex;
+  font-size: 22px;
+}
+
+
+
+
+

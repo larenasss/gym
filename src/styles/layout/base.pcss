@@ -1,23 +1,16 @@
-html {
-  @include desktop {
-    font-size: 15px;
-  }
-  @include tablets {
-    font-size: 14px;
-  }
-}
 body,
 html {
   height: 100%;
 }
 
 body {
-  font-family: 'Open Sans', Helvetica, sans-serif;
-  font-size: 16px;
+  font-family: 'introRegular', Helvetica, sans-serif;
+  font-size: 14px;
   line-height: 1.42;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: $text-color;
+  color: #f3f9fa;
+  overflow-y: scroll;
 }
 
 .wrapper {
@@ -28,23 +21,22 @@ body {
 
 .container {
   margin: 0 auto;
-  max-width: 1480px;
-  width: 95%;
-  // width: 1490px;
-
-  @include phones {
-    width: 85%;
-  }
+  max-width: 975px;
 }
 
-.fullscreen-section {
-  height: 100vh;
-  min-height: 650px;
+.container__slider {
+  max-width: 1015px;
 }
+
 
 button {
   border: 0;
   cursor: pointer;
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
 }
 
 * {
