@@ -6,6 +6,7 @@
 1. $ git clone https://gitlab.com/larenasss/test_one
 2. $ cd test_one
 3. $ yarn
+
 Скрипты package.json:
 
 * dev: Запустит webpack-dev-server с горячей заменой модулей
