@@ -152,15 +152,23 @@ margin-bottom: 10px;
 }
 
 .modal__input {
-box-sizing: border-box;
-width: 100%;
-padding: 8px 16px;
-box-shadow: 0 0 0 1px #b7e5eb inset;
-border: 0;
-border-radius: 2px;
-background: #d3eff2;
-color: #333;
-font-size: 16px;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 8px 16px;
+  box-shadow: 0 0 0 1px #b7e5eb inset;
+  border: 0;
+  border-radius: 2px;
+  background: #d3eff2;
+  color: #626161;
+  font-size: 16px;
+
+  &::placeholder {
+    color: #626161;
+  }
+
+  &:focus-within {
+    background-color: #ffffff;
+  }
 }
 
 .modal__subtitle {
