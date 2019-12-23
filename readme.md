@@ -3,7 +3,7 @@
 
 Перед установкой зависимостей и запуском проекта убедитесь, что у вас установлена последняя версия Node.js & NPM, а так же последняя версия Yarn
 
-1. $ git clone https://gitlab.com/larenasss/test_one
+1. $ git clone https://github.com/larenasss/test_one
 2. $ cd test_one
 3. $ yarn
 
