@@ -1,3 +1,3 @@
 
-https://larenasss.github.io/test_one/dist/  <== Посмотреть тут
+https://larenasss.github.io/gym/dist/  <== Посмотреть тут
 
